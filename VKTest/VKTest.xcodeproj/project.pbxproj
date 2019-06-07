@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B200E22AAA48600E1959D /* AppDelegate.swift */; };
 		213B201122AAA48600E1959D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B201022AAA48600E1959D /* ViewController.swift */; };
-		213B201422AAA48600E1959D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213B201222AAA48600E1959D /* Main.storyboard */; };
 		213B201622AAA48600E1959D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213B201522AAA48600E1959D /* Assets.xcassets */; };
 		213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213B201722AAA48600E1959D /* LaunchScreen.storyboard */; };
 		213B202422AAA48600E1959D /* VKTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B202322AAA48600E1959D /* VKTestTests.swift */; };
+		213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213B202E22AAA4EB00E1959D /* ViewController.xib */; };
+		213B203622AAA80600E1959D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B203522AAA80600E1959D /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		213B200B22AAA48600E1959D /* VKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213B200E22AAA48600E1959D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213B201022AAA48600E1959D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		213B201322AAA48600E1959D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		213B201522AAA48600E1959D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		213B201822AAA48600E1959D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		213B201A22AAA48600E1959D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		213B201F22AAA48600E1959D /* VKTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		213B202322AAA48600E1959D /* VKTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKTestTests.swift; sourceTree = "<group>"; };
 		213B202522AAA48600E1959D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		213B202E22AAA4EB00E1959D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		213B203522AAA80600E1959D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,8 @@
 		213B200D22AAA48600E1959D /* VKTest */ = {
 			isa = PBXGroup;
 			children = (
-				213B200E22AAA48600E1959D /* AppDelegate.swift */,
-				213B201022AAA48600E1959D /* ViewController.swift */,
-				213B201222AAA48600E1959D /* Main.storyboard */,
-				213B201522AAA48600E1959D /* Assets.xcassets */,
-				213B201722AAA48600E1959D /* LaunchScreen.storyboard */,
-				213B201A22AAA48600E1959D /* Info.plist */,
+				213B203122AAA78800E1959D /* Classes */,
+				213B203022AAA61C00E1959D /* Resources */,
 			);
 			path = VKTest;
 			sourceTree = "<group>";
@@ -94,6 +92,51 @@
 				213B202522AAA48600E1959D /* Info.plist */,
 			);
 			path = VKTestTests;
+			sourceTree = "<group>";
+		};
+		213B203022AAA61C00E1959D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				213B201522AAA48600E1959D /* Assets.xcassets */,
+				213B201722AAA48600E1959D /* LaunchScreen.storyboard */,
+				213B201A22AAA48600E1959D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		213B203122AAA78800E1959D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				213B200E22AAA48600E1959D /* AppDelegate.swift */,
+				213B203422AAA7E400E1959D /* Routers */,
+				213B203222AAA7A100E1959D /* Screens  */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		213B203222AAA7A100E1959D /* Screens  */ = {
+			isa = PBXGroup;
+			children = (
+				213B203322AAA7B800E1959D /* View Controller */,
+			);
+			path = "Screens ";
+			sourceTree = "<group>";
+		};
+		213B203322AAA7B800E1959D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				213B201022AAA48600E1959D /* ViewController.swift */,
+				213B202E22AAA4EB00E1959D /* ViewController.xib */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		213B203422AAA7E400E1959D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				213B203522AAA80600E1959D /* Router.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */,
+				213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */,
 				213B201622AAA48600E1959D /* Assets.xcassets in Resources */,
-				213B201422AAA48600E1959D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B201122AAA48600E1959D /* ViewController.swift in Sources */,
+				213B203622AAA80600E1959D /* Router.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +265,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		213B201222AAA48600E1959D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				213B201322AAA48600E1959D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		213B201722AAA48600E1959D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DARLZ6NSYB;
-				INFOPLIST_FILE = VKTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VKTest/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DARLZ6NSYB;
-				INFOPLIST_FILE = VKTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VKTest/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
