@@ -14,6 +14,10 @@
 		210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */; };
 		210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BF022AFF47C00359BC9 /* Extensions+UIView.swift */; };
 		210E1BF322AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */; };
+		210E1BF722B0093100359BC9 /* InfoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BF522B0093100359BC9 /* InfoUserTableViewCell.swift */; };
+		210E1BF822B0093100359BC9 /* InfoUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */; };
+		210E1BFD22B0107700359BC9 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BFC22B0107700359BC9 /* HeightContainable.swift */; };
+		210E1BFF22B0118D00359BC9 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BFE22B0118D00359BC9 /* Typealiases.swift */; };
 		213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B200E22AAA48600E1959D /* AppDelegate.swift */; };
 		213B201122AAA48600E1959D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B201022AAA48600E1959D /* ViewController.swift */; };
 		213B201622AAA48600E1959D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213B201522AAA48600E1959D /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		210E1BF022AFF47C00359BC9 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		210E1BF522B0093100359BC9 /* InfoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserTableViewCell.swift; sourceTree = "<group>"; };
+		210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUserTableViewCell.xib; sourceTree = "<group>"; };
+		210E1BFC22B0107700359BC9 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
+		210E1BFE22B0118D00359BC9 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		213B200B22AAA48600E1959D /* VKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213B200E22AAA48600E1959D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213B201022AAA48600E1959D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		210E1BE622AFEDDC00359BC9 /* Coustom Views */ = {
 			isa = PBXGroup;
 			children = (
+				210E1BF422B008BA00359BC9 /* Cell */,
 				210E1BE722AFEEF300359BC9 /* Photo View */,
 			);
 			path = "Coustom Views";
@@ -101,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */,
+				210E1BFC22B0107700359BC9 /* HeightContainable.swift */,
+				210E1BFE22B0118D00359BC9 /* Typealiases.swift */,
 			);
 			path = Protocolos;
 			sourceTree = "<group>";
@@ -112,6 +123,15 @@
 				210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		210E1BF422B008BA00359BC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BF522B0093100359BC9 /* InfoUserTableViewCell.swift */,
+				210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		213B200222AAA48500E1959D = {
@@ -282,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */,
+				210E1BF822B0093100359BC9 /* InfoUserTableViewCell.xib in Resources */,
 				213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */,
 				213B201622AAA48600E1959D /* Assets.xcassets in Resources */,
 				210E1BE522AFED4800359BC9 /* RegisterViewController.xib in Resources */,
@@ -308,6 +329,9 @@
 				210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */,
 				213B203622AAA80600E1959D /* Router.swift in Sources */,
 				210E1BE922AFEF3D00359BC9 /* PhotoView.swift in Sources */,
+				210E1BFD22B0107700359BC9 /* HeightContainable.swift in Sources */,
+				210E1BF722B0093100359BC9 /* InfoUserTableViewCell.swift in Sources */,
+				210E1BFF22B0118D00359BC9 /* Typealiases.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
 				210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */,
 				210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */,

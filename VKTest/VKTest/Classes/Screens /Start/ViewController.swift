@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         Decorator.decorate(self)
         addTargets()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     private func addTargets(){
         signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
@@ -28,7 +34,7 @@ class ViewController: UIViewController {
         
     }
     @objc private func signUpButtonClicked() {
-        
+        StartRouter.shared.goToRegisterScreen(from: self)
     }
 }
 extension ViewController {
