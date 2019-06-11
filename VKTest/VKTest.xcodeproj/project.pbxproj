@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */; };
+		210E1BE422AFED4800359BC9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BE222AFED4800359BC9 /* RegisterViewController.swift */; };
+		210E1BE522AFED4800359BC9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210E1BE322AFED4800359BC9 /* RegisterViewController.xib */; };
+		210E1BE922AFEF3D00359BC9 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BE822AFEF3D00359BC9 /* PhotoView.swift */; };
+		210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */; };
+		210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BF022AFF47C00359BC9 /* Extensions+UIView.swift */; };
+		210E1BF322AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */; };
 		213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B200E22AAA48600E1959D /* AppDelegate.swift */; };
 		213B201122AAA48600E1959D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B201022AAA48600E1959D /* ViewController.swift */; };
 		213B201622AAA48600E1959D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213B201522AAA48600E1959D /* Assets.xcassets */; };
@@ -29,6 +35,12 @@
 
 /* Begin PBXFileReference section */
 		210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		210E1BE222AFED4800359BC9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		210E1BE322AFED4800359BC9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		210E1BE822AFEF3D00359BC9 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		210E1BF022AFF47C00359BC9 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		213B200B22AAA48600E1959D /* VKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213B200E22AAA48600E1959D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213B201022AAA48600E1959D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210E1BE122AFED2000359BC9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BE222AFED4800359BC9 /* RegisterViewController.swift */,
+				210E1BE322AFED4800359BC9 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		210E1BE622AFEDDC00359BC9 /* Coustom Views */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BE722AFEEF300359BC9 /* Photo View */,
+			);
+			path = "Coustom Views";
+			sourceTree = "<group>";
+		};
+		210E1BE722AFEEF300359BC9 /* Photo View */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BE822AFEF3D00359BC9 /* PhotoView.swift */,
+			);
+			path = "Photo View";
+			sourceTree = "<group>";
+		};
+		210E1BEC22AFEF7D00359BC9 /* Protocolos */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */,
+			);
+			path = Protocolos;
+			sourceTree = "<group>";
+		};
+		210E1BEF22AFF46600359BC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BF022AFF47C00359BC9 /* Extensions+UIView.swift */,
+				210E1BF222AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		213B200222AAA48500E1959D = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				213B200E22AAA48600E1959D /* AppDelegate.swift */,
+				210E1BEF22AFF46600359BC9 /* Extensions */,
+				210E1BEC22AFEF7D00359BC9 /* Protocolos */,
 				213B203422AAA7E400E1959D /* Routers */,
 				213B203222AAA7A100E1959D /* Screens  */,
+				210E1BE622AFEDDC00359BC9 /* Coustom Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -119,18 +176,19 @@
 		213B203222AAA7A100E1959D /* Screens  */ = {
 			isa = PBXGroup;
 			children = (
-				213B203322AAA7B800E1959D /* View Controller */,
+				210E1BE122AFED2000359BC9 /* Register */,
+				213B203322AAA7B800E1959D /* Start */,
 			);
 			path = "Screens ";
 			sourceTree = "<group>";
 		};
-		213B203322AAA7B800E1959D /* View Controller */ = {
+		213B203322AAA7B800E1959D /* Start */ = {
 			isa = PBXGroup;
 			children = (
 				213B201022AAA48600E1959D /* ViewController.swift */,
 				213B202E22AAA4EB00E1959D /* ViewController.xib */,
 			);
-			path = "View Controller";
+			path = Start;
 			sourceTree = "<group>";
 		};
 		213B203422AAA7E400E1959D /* Routers */ = {
@@ -226,6 +284,7 @@
 				213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */,
 				213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */,
 				213B201622AAA48600E1959D /* Assets.xcassets in Resources */,
+				210E1BE522AFED4800359BC9 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,9 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210E1BF322AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				213B201122AAA48600E1959D /* ViewController.swift in Sources */,
+				210E1BE422AFED4800359BC9 /* RegisterViewController.swift in Sources */,
+				210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */,
 				213B203622AAA80600E1959D /* Router.swift in Sources */,
+				210E1BE922AFEF3D00359BC9 /* PhotoView.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
+				210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */,
 				210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
