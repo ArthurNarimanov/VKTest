@@ -10,14 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var logoView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Decorator.decorate(self)
+        addTargets()
+    }
+    private func addTargets(){
+        signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+    }
+    @objc private func signInButtonClicked() {
+        
+    }
+    @objc private func signUpButtonClicked() {
+        
     }
 }
 extension ViewController {
@@ -25,8 +36,8 @@ extension ViewController {
         static let buttonCornerRdadius: CGFloat = 8	
         private init() {}
         static func decorate(_ vc: ViewController) {
-            vc.registerButton.layer.cornerRadius = buttonCornerRdadius
-            vc.registerButton.layer.borderColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
+            vc.signInButton.layer.cornerRadius = buttonCornerRdadius
+            vc.signInButton.layer.borderColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)
         }
     }
 }

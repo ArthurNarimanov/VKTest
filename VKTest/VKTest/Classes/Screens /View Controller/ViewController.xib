@@ -13,9 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="VKTest" customModuleProvider="target">
             <connections>
-                <outlet property="loginButton" destination="7h0-KU-yIh" id="gdn-Ig-oh1"/>
                 <outlet property="logoView" destination="hYt-2u-D66" id="xdu-eK-hTx"/>
-                <outlet property="registerButton" destination="pMl-mL-oCm" id="hQM-LA-Nr3"/>
+                <outlet property="signInButton" destination="7h0-KU-yIh" id="XEM-7S-J6B"/>
+                <outlet property="signUpButton" destination="pMl-mL-oCm" id="7TW-tf-Lbh"/>
                 <outlet property="titleLabel" destination="Vae-yI-1bw" id="0sM-bg-vyg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kFe-bP-AId"/>
             </connections>

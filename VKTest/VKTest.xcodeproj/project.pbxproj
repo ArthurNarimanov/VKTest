@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */; };
 		213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B200E22AAA48600E1959D /* AppDelegate.swift */; };
 		213B201122AAA48600E1959D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B201022AAA48600E1959D /* ViewController.swift */; };
 		213B201622AAA48600E1959D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213B201522AAA48600E1959D /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		213B200B22AAA48600E1959D /* VKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213B200E22AAA48600E1959D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213B201022AAA48600E1959D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				213B203522AAA80600E1959D /* Router.swift */,
+				210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				213B201122AAA48600E1959D /* ViewController.swift in Sources */,
 				213B203622AAA80600E1959D /* Router.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
+				210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
