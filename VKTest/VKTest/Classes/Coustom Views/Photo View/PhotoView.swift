@@ -11,16 +11,30 @@ import UIKit
 class PhotoView: UIView {
     
     private let stackView = UIStackView()
+    private let pluseView = UIImageView()
+    
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
+        addStackView()
+        addPlusView()
+    }
+    // coloring plus image
+    private func addPlusView() {
+        pluseView.contentMode = .scaleAspectFit
+        pluseView.tintColor = #colorLiteral(red: 0.2745098039, green: 0.5019607843, blue: 0.7607843137, alpha: 1)
+        pluseView.image = #imageLiteral(resourceName: "add (1).png")
+        stackView.addArrangedSubview(pluseView)
     }
     
     // add stackview in View
     private func addStackView() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        // setting stack's elements
+        stackView.distribution = .equalCentering
+        stackView.alignment = .center
+
         addSubview(stackView)
-        stackView.backgroundColor = .green
         let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[stackView]|,V:|[stackView]|", dict: ["stackView": stackView])
         addConstraints(constraints)
         
