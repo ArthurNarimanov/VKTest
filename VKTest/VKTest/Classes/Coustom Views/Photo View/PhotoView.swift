@@ -12,28 +12,41 @@ class PhotoView: UIView {
     
     private let stackView = UIStackView()
     private let pluseView = UIImageView()
-    
+    private let label = UILabel()
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         addStackView()
         addPlusView()
+        addLabel()
     }
-    // coloring plus image
+    // add label in stackView, settings color and font and font size
+    private func addLabel() {
+        label.text = "photo"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = #colorLiteral(red: 0.2745098039, green: 0.5019607843, blue: 0.7607843137, alpha: 1)
+        stackView.addArrangedSubview(label)
+    }
+    
+    // coloring plus image and add plus in stackView
     private func addPlusView() {
         pluseView.contentMode = .scaleAspectFit
         pluseView.tintColor = #colorLiteral(red: 0.2745098039, green: 0.5019607843, blue: 0.7607843137, alpha: 1)
-        pluseView.image = #imageLiteral(resourceName: "add (1).png")
+        pluseView.image = UIImage(named: "add")
+        
         stackView.addArrangedSubview(pluseView)
+        
+        pluseView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.35).isActive = true
+        pluseView.widthAnchor.constraint(equalTo: pluseView.heightAnchor).isActive = true
     }
     
     // add stackview in View
     private func addStackView() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         // setting stack's elements
-        stackView.distribution = .equalCentering
+        stackView.distribution = .fillProportionally
         stackView.alignment = .center
-
+        stackView.axis = .vertical
         addSubview(stackView)
         let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[stackView]|,V:|[stackView]|", dict: ["stackView": stackView])
         addConstraints(constraints)
