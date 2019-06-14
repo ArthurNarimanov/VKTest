@@ -10,6 +10,10 @@ import UIKit
 
 extension UIView {
     func round() {
-        layer.cornerRadius = frame.height / 2 
+        // speed version
+        let temp: CGFloat = frame.height / 2
+        layer.cornerRadius = temp
+        // none speed version
+//        layer.cornerRadius = frame.height / 2
     }
 }

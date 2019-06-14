@@ -26,6 +26,9 @@
 		213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213B202E22AAA4EB00E1959D /* ViewController.xib */; };
 		213B203622AAA80600E1959D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B203522AAA80600E1959D /* Router.swift */; };
 		2145C3CB22B3A8520026FBDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2145C3CA22B3A8520026FBDF /* GoogleService-Info.plist */; };
+		2145C3CE22B3E9110026FBDF /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145C3CD22B3E9110026FBDF /* HeaderTitleView.swift */; };
+		2145C3D022B3E91C0026FBDF /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2145C3CF22B3E91C0026FBDF /* HeaderTitleView.xib */; };
+		2145C3D222B3EBDB0026FBDF /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145C3D122B3EBDB0026FBDF /* CellHeaderProtocol.swift */; };
 		C7A1FEA2694AC8E1B6E86876 /* Pods_VKTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A734EF9EBF8A58172E28B /* Pods_VKTestTests.framework */; };
 		F4028868897BA8919E29DE9D /* Pods_VKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7801BFC67945565EB61DF881 /* Pods_VKTest.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +66,10 @@
 		213B202522AAA48600E1959D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		213B202E22AAA4EB00E1959D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		213B203522AAA80600E1959D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		2145C3CA22B3A8520026FBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2145C3CA22B3A8520026FBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2145C3CD22B3E9110026FBDF /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
+		2145C3CF22B3E91C0026FBDF /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
+		2145C3D122B3EBDB0026FBDF /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
 		39E1885B081E857E58063A30 /* Pods-VKTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTestTests.debug.xcconfig"; path = "Target Support Files/Pods-VKTestTests/Pods-VKTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7801BFC67945565EB61DF881 /* Pods_VKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		966A734EF9EBF8A58172E28B /* Pods_VKTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +110,7 @@
 		210E1BE622AFEDDC00359BC9 /* Coustom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2145C3CC22B3E8CD0026FBDF /* Header Title View */,
 				210E1BF422B008BA00359BC9 /* Cell */,
 				210E1BE722AFEEF300359BC9 /* Photo View */,
 			);
@@ -122,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				210E1BED22AFEF9D00359BC9 /* NibLoadable.swift */,
+				2145C3D122B3EBDB0026FBDF /* CellHeaderProtocol.swift */,
 				210E1BFC22B0107700359BC9 /* HeightContainable.swift */,
 				210E1BFE22B0118D00359BC9 /* Typealiases.swift */,
 			);
@@ -140,8 +148,7 @@
 		210E1BF422B008BA00359BC9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				210E1BF522B0093100359BC9 /* InfoUserTableViewCell.swift */,
-				210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */,
+				2145C3D322B3FDF00026FBDF /* Info User Cell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -169,7 +176,6 @@
 		213B200D22AAA48600E1959D /* VKTest */ = {
 			isa = PBXGroup;
 			children = (
-				2145C3CA22B3A8520026FBDF /* GoogleService-Info.plist */,
 				213B203122AAA78800E1959D /* Classes */,
 				213B203022AAA61C00E1959D /* Resources */,
 			);
@@ -190,6 +196,7 @@
 			children = (
 				213B201522AAA48600E1959D /* Assets.xcassets */,
 				213B201722AAA48600E1959D /* LaunchScreen.storyboard */,
+				2145C3CA22B3A8520026FBDF /* GoogleService-Info.plist */,
 				213B201A22AAA48600E1959D /* Info.plist */,
 			);
 			path = Resources;
@@ -233,6 +240,24 @@
 				210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		2145C3CC22B3E8CD0026FBDF /* Header Title View */ = {
+			isa = PBXGroup;
+			children = (
+				2145C3CD22B3E9110026FBDF /* HeaderTitleView.swift */,
+				2145C3CF22B3E91C0026FBDF /* HeaderTitleView.xib */,
+			);
+			path = "Header Title View";
+			sourceTree = "<group>";
+		};
+		2145C3D322B3FDF00026FBDF /* Info User Cell */ = {
+			isa = PBXGroup;
+			children = (
+				210E1BF522B0093100359BC9 /* InfoUserTableViewCell.swift */,
+				210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */,
+			);
+			path = "Info User Cell";
 			sourceTree = "<group>";
 		};
 		E1948A15FD305328CA676334 /* Pods */ = {
@@ -340,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */,
+				2145C3D022B3E91C0026FBDF /* HeaderTitleView.xib in Resources */,
 				210E1BF822B0093100359BC9 /* InfoUserTableViewCell.xib in Resources */,
 				213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */,
 				213B201622AAA48600E1959D /* Assets.xcassets in Resources */,
@@ -426,12 +452,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2145C3D222B3EBDB0026FBDF /* CellHeaderProtocol.swift in Sources */,
 				210E1BF322AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				213B201122AAA48600E1959D /* ViewController.swift in Sources */,
 				210E1BE422AFED4800359BC9 /* RegisterViewController.swift in Sources */,
 				210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */,
 				213B203622AAA80600E1959D /* Router.swift in Sources */,
 				210E1BE922AFEF3D00359BC9 /* PhotoView.swift in Sources */,
+				2145C3CE22B3E9110026FBDF /* HeaderTitleView.swift in Sources */,
 				210E1BFD22B0107700359BC9 /* HeightContainable.swift in Sources */,
 				210E1BF722B0093100359BC9 /* InfoUserTableViewCell.swift in Sources */,
 				210E1BFF22B0118D00359BC9 /* Typealiases.swift in Sources */,
@@ -526,6 +554,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
