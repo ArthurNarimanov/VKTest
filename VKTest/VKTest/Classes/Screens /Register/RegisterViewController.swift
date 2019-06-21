@@ -13,6 +13,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let models: [HeaderModel] = [.info, .sex, .birthday]
+    
+    private let datePikerView: UIDatePicker = {
+        let piker = UIDatePicker()
+        piker.maximumDate = Date()
+        return piker
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +26,23 @@ class RegisterViewController: UIViewController {
         title = "Registration"
         registerCells()
         delegating()
+        configurateDatePikerView()
         // Do any additional setup after loading the view.
+    }
+    
+    private func configurateDatePikerView() {
+        datePikerView.addTarget(self, action: #selector(datePikerChanged(sender:)), for: .valueChanged)
+    }
+    
+    @objc private func datePikerChanged(sender: UIDatePicker) {
+        let date = sender.date
+        print(date)
     }
 
     private func registerCells(){
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
+        tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
+        tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
     }
     private func delegating() {
         tableView.dataSource = self
@@ -68,7 +86,7 @@ extension RegisterViewController {
     fileprivate final class Decorator {
         static func decorate(_ vc: RegisterViewController) {
             vc.tableView.separatorColor = .clear
-            
+            vc.tableView.keyboardDismissMode = .onDrag
             vc.tableView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
             vc.navigationController?.navigationBar.prefersLargeTitles = true
             //create undents
@@ -83,8 +101,8 @@ extension RegisterViewController: UITableViewDelegate {
         switch model {
         case .userInfo:
             return 100
-        default:
-            return 0
+        case .sex, .birthday:
+            return 44
         }
     }
 }
@@ -106,7 +124,7 @@ extension RegisterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let headerModel = models[section]
         switch headerModel {
-        case .sex:
+        case .sex, .birthday:
             return 44
         default:
             return 0
@@ -123,13 +141,23 @@ extension RegisterViewController: UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
                 return cell
             }
-        default:
-            break
+        case .sex:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell {
+            cell.indexChanged = { index in
+                print(index)
+            }
+            return cell
+            }
+        case .birthday:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.name, for: indexPath) as? TextFieldTableViewCell {
+                cell.textField.inputView = datePikerView
+                return cell
+            }
         }
         return UITableViewCell()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3 
+        return models.count
     }
 }

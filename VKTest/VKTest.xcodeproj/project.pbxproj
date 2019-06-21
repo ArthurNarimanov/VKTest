@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2108873A22BD1DC00066C30C /* SegmenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2108873822BD1DC00066C30C /* SegmenterTableViewCell.swift */; };
+		2108873B22BD1DC00066C30C /* SegmenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2108873922BD1DC00066C30C /* SegmenterTableViewCell.xib */; };
+		2108873E22BD293B0066C30C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2108873C22BD293A0066C30C /* TextTableViewCell.swift */; };
+		2108873F22BD293B0066C30C /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2108873D22BD293A0066C30C /* TextTableViewCell.xib */; };
+		2108874622BD30820066C30C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2108874422BD30820066C30C /* TextFieldTableViewCell.swift */; };
+		2108874722BD30820066C30C /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2108874522BD30820066C30C /* TextFieldTableViewCell.xib */; };
 		210E1BE022AFEC0A00359BC9 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */; };
 		210E1BE422AFED4800359BC9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E1BE222AFED4800359BC9 /* RegisterViewController.swift */; };
 		210E1BE522AFED4800359BC9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210E1BE322AFED4800359BC9 /* RegisterViewController.xib */; };
@@ -44,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2108873822BD1DC00066C30C /* SegmenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmenterTableViewCell.swift; sourceTree = "<group>"; };
+		2108873922BD1DC00066C30C /* SegmenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmenterTableViewCell.xib; sourceTree = "<group>"; };
+		2108873C22BD293A0066C30C /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		2108873D22BD293A0066C30C /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		2108874422BD30820066C30C /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		2108874522BD30820066C30C /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		210E1BDF22AFEC0A00359BC9 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		210E1BE222AFED4800359BC9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		210E1BE322AFED4800359BC9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -98,6 +110,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2108873722BD1D770066C30C /* Segmenter Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2108873822BD1DC00066C30C /* SegmenterTableViewCell.swift */,
+				2108873922BD1DC00066C30C /* SegmenterTableViewCell.xib */,
+			);
+			path = "Segmenter Cell";
+			sourceTree = "<group>";
+		};
+		2108874022BD29510066C30C /* Text Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2108873C22BD293A0066C30C /* TextTableViewCell.swift */,
+				2108873D22BD293A0066C30C /* TextTableViewCell.xib */,
+			);
+			path = "Text Cell";
+			sourceTree = "<group>";
+		};
+		2108874122BD30470066C30C /* Text Field Cell  */ = {
+			isa = PBXGroup;
+			children = (
+				2108874422BD30820066C30C /* TextFieldTableViewCell.swift */,
+				2108874522BD30820066C30C /* TextFieldTableViewCell.xib */,
+			);
+			path = "Text Field Cell ";
+			sourceTree = "<group>";
+		};
 		210E1BE122AFED2000359BC9 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +187,10 @@
 		210E1BF422B008BA00359BC9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2108874122BD30470066C30C /* Text Field Cell  */,
+				2108873722BD1D770066C30C /* Segmenter Cell */,
 				2145C3D322B3FDF00026FBDF /* Info User Cell */,
+				2108874022BD29510066C30C /* Text Cell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -364,13 +406,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2108873B22BD1DC00066C30C /* SegmenterTableViewCell.xib in Resources */,
 				213B201922AAA48600E1959D /* LaunchScreen.storyboard in Resources */,
 				2145C3D022B3E91C0026FBDF /* HeaderTitleView.xib in Resources */,
 				210E1BF822B0093100359BC9 /* InfoUserTableViewCell.xib in Resources */,
 				213B202F22AAA4EB00E1959D /* ViewController.xib in Resources */,
 				213B201622AAA48600E1959D /* Assets.xcassets in Resources */,
 				210E1BE522AFED4800359BC9 /* RegisterViewController.xib in Resources */,
+				2108874722BD30820066C30C /* TextFieldTableViewCell.xib in Resources */,
 				2145C3CB22B3A8520026FBDF /* GoogleService-Info.plist in Resources */,
+				2108873F22BD293B0066C30C /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2108874622BD30820066C30C /* TextFieldTableViewCell.swift in Sources */,
 				2145C3D222B3EBDB0026FBDF /* CellHeaderProtocol.swift in Sources */,
 				210E1BF322AFF74C00359BC9 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				213B201122AAA48600E1959D /* ViewController.swift in Sources */,
@@ -462,6 +508,8 @@
 				2145C3CE22B3E9110026FBDF /* HeaderTitleView.swift in Sources */,
 				210E1BFD22B0107700359BC9 /* HeightContainable.swift in Sources */,
 				210E1BF722B0093100359BC9 /* InfoUserTableViewCell.swift in Sources */,
+				2108873E22BD293B0066C30C /* TextTableViewCell.swift in Sources */,
+				2108873A22BD1DC00066C30C /* SegmenterTableViewCell.swift in Sources */,
 				210E1BFF22B0118D00359BC9 /* Typealiases.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
 				210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */,
@@ -539,7 +587,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",

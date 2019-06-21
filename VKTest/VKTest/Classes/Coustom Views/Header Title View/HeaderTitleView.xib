@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik8-Cz-wWo">
-                    <rect key="frame" x="16" y="23" width="98" height="21"/>
+                    <rect key="frame" x="16" y="19" width="98" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="darkGreyColor"/>
                     <nil key="highlightedColor"/>
@@ -28,7 +28,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ik8-Cz-wWo" secondAttribute="trailing" constant="8" id="Cui-gN-g5g"/>
                 <constraint firstItem="ik8-Cz-wWo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GKR-PG-5a1"/>
-                <constraint firstItem="ik8-Cz-wWo" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="aab-m7-elC"/>
+                <constraint firstItem="ik8-Cz-wWo" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-4" id="aab-m7-elC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
