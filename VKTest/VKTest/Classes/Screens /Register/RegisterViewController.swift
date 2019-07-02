@@ -74,8 +74,8 @@ extension RegisterViewController {
                 return [.userInfo]
             case .birthday:
                 return [.birthday]
-            default:
-                return []
+//            default:
+//                return []
             }
         }
     }

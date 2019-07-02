@@ -35,6 +35,8 @@
 		2145C3CE22B3E9110026FBDF /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145C3CD22B3E9110026FBDF /* HeaderTitleView.swift */; };
 		2145C3D022B3E91C0026FBDF /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2145C3CF22B3E91C0026FBDF /* HeaderTitleView.xib */; };
 		2145C3D222B3EBDB0026FBDF /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145C3D122B3EBDB0026FBDF /* CellHeaderProtocol.swift */; };
+		218714EE22CBA7BA007CCD4E /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218714ED22CBA7BA007CCD4E /* Sex.swift */; };
+		218714F022CBA806007CCD4E /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218714EF22CBA806007CCD4E /* RegisterModel.swift */; };
 		C7A1FEA2694AC8E1B6E86876 /* Pods_VKTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A734EF9EBF8A58172E28B /* Pods_VKTestTests.framework */; };
 		F4028868897BA8919E29DE9D /* Pods_VKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7801BFC67945565EB61DF881 /* Pods_VKTest.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		2145C3CD22B3E9110026FBDF /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		2145C3CF22B3E91C0026FBDF /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		2145C3D122B3EBDB0026FBDF /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
+		218714ED22CBA7BA007CCD4E /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		218714EF22CBA806007CCD4E /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		39E1885B081E857E58063A30 /* Pods-VKTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTestTests.debug.xcconfig"; path = "Target Support Files/Pods-VKTestTests/Pods-VKTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7801BFC67945565EB61DF881 /* Pods_VKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		966A734EF9EBF8A58172E28B /* Pods_VKTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				213B200E22AAA48600E1959D /* AppDelegate.swift */,
+				218714EC22CBA791007CCD4E /* Models */,
 				210E1BEF22AFF46600359BC9 /* Extensions */,
 				210E1BEC22AFEF7D00359BC9 /* Protocolos */,
 				213B203422AAA7E400E1959D /* Routers */,
@@ -300,6 +305,15 @@
 				210E1BF622B0093100359BC9 /* InfoUserTableViewCell.xib */,
 			);
 			path = "Info User Cell";
+			sourceTree = "<group>";
+		};
+		218714EC22CBA791007CCD4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				218714ED22CBA7BA007CCD4E /* Sex.swift */,
+				218714EF22CBA806007CCD4E /* RegisterModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E1948A15FD305328CA676334 /* Pods */ = {
@@ -505,11 +519,13 @@
 				210E1BEE22AFEF9D00359BC9 /* NibLoadable.swift in Sources */,
 				213B203622AAA80600E1959D /* Router.swift in Sources */,
 				210E1BE922AFEF3D00359BC9 /* PhotoView.swift in Sources */,
+				218714EE22CBA7BA007CCD4E /* Sex.swift in Sources */,
 				2145C3CE22B3E9110026FBDF /* HeaderTitleView.swift in Sources */,
 				210E1BFD22B0107700359BC9 /* HeightContainable.swift in Sources */,
 				210E1BF722B0093100359BC9 /* InfoUserTableViewCell.swift in Sources */,
 				2108873E22BD293B0066C30C /* TextTableViewCell.swift in Sources */,
 				2108873A22BD1DC00066C30C /* SegmenterTableViewCell.swift in Sources */,
+				218714F022CBA806007CCD4E /* RegisterModel.swift in Sources */,
 				210E1BFF22B0118D00359BC9 /* Typealiases.swift in Sources */,
 				213B200F22AAA48600E1959D /* AppDelegate.swift in Sources */,
 				210E1BF122AFF47C00359BC9 /* Extensions+UIView.swift in Sources */,
