@@ -14,6 +14,8 @@ class PhotoView: UIView {
     private let pluseView = UIImageView()
     private let label = UILabel()
     
+    var clicked: VoidClosure?
+    
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         Decorator.decorate(self)
@@ -21,6 +23,13 @@ class PhotoView: UIView {
         addPlusView()
         addLabel()
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        clicked?()
+    }
+    
     // add label in stackView, settings color and font and font size
     private func addLabel() {
         label.text = "photo"

@@ -82,6 +82,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundFieldsView" destination="0ed-l7-rAL" id="tbV-97-7aO"/>
+                <outlet property="photoView" destination="Vv0-vq-HpC" id="evl-fW-mxU"/>
             </connections>
         </tableViewCell>
     </objects>

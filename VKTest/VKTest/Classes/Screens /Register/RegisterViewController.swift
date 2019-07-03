@@ -38,7 +38,12 @@ class RegisterViewController: UIViewController {
         let date = sender.date
         print(date)
     }
-
+    
+    private func photoViewCliked() {
+        let imagePikerController = UIImagePickerController()
+        imagePikerController.delegate
+    }
+    
     private func registerCells(){
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
         tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
@@ -54,6 +59,16 @@ class RegisterViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
+extension RegisterViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] else {
+            return
+        }
+        
+        
+    }
+}
+
 extension RegisterViewController {
     fileprivate enum CellModel {
         case userInfo
@@ -130,6 +145,7 @@ extension RegisterViewController: UITableViewDataSource {
             return 0
         }
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models[section].cellModels.count
     }
@@ -139,6 +155,7 @@ extension RegisterViewController: UITableViewDataSource {
         switch model {
         case .userInfo:
             if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
+                cell.photoViewClicked = self.photoViewCliked
                 return cell
             }
         case .sex:
